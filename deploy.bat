@@ -20,8 +20,12 @@ echo 3. Pushing source code to GitHub...
 git push
 
 echo.
-echo 4. Deploying compiled site to GitHub Pages...
-call npx ng deploy --base-href=/portfolio/
+echo 4. Forcing clean Angular build...
+call npx ng build --configuration production --base-href=/portfolio/
+
+echo.
+echo 5. Deploying compiled site to GitHub Pages...
+call npx angular-cli-ghpages --dir=dist/portfolio/browser
 
 
 echo.
