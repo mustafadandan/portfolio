@@ -21,7 +21,8 @@ git push
 
 echo.
 echo 4. Deploying compiled site to GitHub Pages...
-call npx ng deploy
+call npx ng deploy --base-href=/MustafaDandan/
+
 
 echo.
 echo =======================================
